@@ -1,0 +1,65 @@
+
+
+<style>
+  
+  
+  .container {
+    
+    background-color: mintcream;
+    text-align: left;
+    display: flex;
+    margin-left: 2px;
+}
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-left: 800px;
+  margin-top: 20px;
+}
+.custom-file-upload {
+  appearance: initial;
+    background-color:cornsilk;
+    cursor: default;
+    align-items: baseline;
+    color: green;
+    text-align: center !important;
+    padding: initial;
+    border: initial;
+}
+
+  </style>
+ 
+<form #userPost="ngForm" (ngSubmit)="onSubmit(userPost.value)">
+  <div class="container">
+<!--<input type="text" name="ACMT 007" ngModel placeholder="Enter message to publish"> <br> <br> 
+<input type="text" name="Attachment " ngModel placeholder="Enter message to publish"><br> <br> 
+<input type="text" name="File Meta Data" ngModel placeholder="Enter message to publish"><br> <br> -->
+<div>
+<h2>Acmt 007 message</h2>
+<textarea style="background-color:whitesmoke;color:mediumblue;" ngModel rows="50" cols="90" name="acmt" >                             
+</textarea>
+</div> 
+
+<div>
+<h2>File Metadata</h2>
+<textarea style="background-color:whitesmoke;color:mediumblue;margin-left: 10px;" ngModel rows="50" cols="90" name="metadata">                             
+</textarea>
+<!--<input type="file" name="avatar" (change)="onFileChange($event)" />  -->
+</div>
+<div>
+<h2>Attachments</h2>
+<input  type="file"  id="myFile" name="filename" style="margin-left: 10px;" class="custom-file-upload" multiple>
+
+</div>
+</div>
+<div>
+<button type="Publish"class="button">Publish</button>
+</div>
+</form>
+
